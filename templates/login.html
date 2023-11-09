@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %} Inicio {% endblock %}
+
+{% block body %}
+
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Iniciar Sesión</h5>
+      </div>
+      <div class="card-body">
+        <form action="/login" method="GET">
+          <div class="mb-3">
+            <label for="usuario" class="form-label">usuario:</label>
+            <input type="text" class="form-control" id="usuario" name = "usuario" placeholder="Nombre de usuario">
+          </div>
+          <div class="mb-3">
+            <label for="contrasena" class="form-label">contraseña: </label>
+            <input type="password" class="form-control" id="contrasena" name = "contraseña"placeholder="Contraseña">
+          </div>
+          <a href="/"class="btn btn-primary">Iniciar Sesión</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

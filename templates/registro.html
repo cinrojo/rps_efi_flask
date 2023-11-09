@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block title %} login {% endblock %}
+
+{% block body %} 
+
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Iniciar Sesión</h5>
+      </div>
+      <div class="card-body">
+        <form action="/agregar_usuario" method="POST">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">usuario</label>
+            <input type="text" class="form-control" id="nombre" name = "usuario"placeholder="Nombre de usuario">
+          </div>
+          <div class="mb-3">
+            <label for="correo" class="form-label">coreo electronico</label>
+            <input type="email" class="form-control" id="correo" name="correo" placeholder="nombre@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="usuario" class="form-label">contraseña</label>
+            <input type="text" class="form-control" id="usuario" name = "contraseña" placeholder="Contraseña">
+          </div>
+          <button type="submit" class="btn btn-primary">Crear Usuario</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  
+    
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+
+{% block title %} Inicio {% endblock %}
+
+{% block body %} 
+<div class="container mt-5">
+    <h1>Bienvenido a BLOGIN</h1>
+    <p>
+      Explora, Aprende y Descubre
+      
+      Aquí encontrarás una amplia variedad de contenido emocionante en una variedad de categorías. Nuestro objetivo es brindarte información valiosa, entretenimiento y perspectivas frescas sobre una variedad de temas.
+      
+     **Nuestro Compromiso**
+      
+      Nos esforzamos por brindarte contenido de alta calidad que informe, inspire y entretenga. Nuestro equipo de expertos en diversas áreas está dedicado a crear contenido que sea relevante y significativo para ti.
+      
+      **Únete a la Conversación**
+      
+      Nos encantaría tener tu participación en nuestras publicaciones. Siempre alentamos los comentarios y las discusiones constructivas. No dudes en compartir tus opiniones y perspectivas en la sección de comentarios de cada artículo.
+      
+      Gracias por visitar Blogin. Esperamos que encuentres contenido que te apasione y te inspire a regresar una y otra vez. ¡Disfruta explorando nuestras categorías y sumergiéndote en el mundo del conocimiento y la diversión!
+      
+       </div>
+
+  {% for post in posts %}
+  
+  <div class="container mt-5">
+    <div class="card">        
+      <div class="card-body">
+        <h5 class="card-title">{{post.titulo}}</h5>
+        
+        <a href="/ver_posteo/{{ post.id }}" class="btn btn-primary">Leer más</a>
+        <a href="/comentario/{{ post.id }}" class="btn btn-primary">comentarios</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+      
+{% endblock %}

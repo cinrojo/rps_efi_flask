@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %} login {% endblock %}
+
+{% block body %}
+
+{% for comentario in comentarios %}
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">Comentario {{ comentario.id }}</h5>
+    </div>
+    <div class="card-body">
+        <p class="card-text">{{ comentario.texto }}</p>
+        <p class="card-text">Fecha: {{ comentario.fecha }}</p>
+        <p class="card-text">Autor: {{ comentario.autor }}</p>
+        <p class="card-text">Post: {{ comentario.id_post }}</p>
+        
+    </div>
+</div>
+
+{% endfor %}
+{% endblock %}
